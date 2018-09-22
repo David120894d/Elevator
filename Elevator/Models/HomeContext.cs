@@ -4,21 +4,37 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Web;
+using Elevator.Models;
 
 namespace Elevator.Models
 {
     public class HomeContext : DataContext<HomeContext>
     {
-        public IEnumerable<int> testProcedure()
+        public IEnumerable<Region> GetRegion()
         {
-            IEnumerable<int> result = null;
+            IEnumerable<Region> regions = null;
             using (var cnt = Concrete.OpenConnection())
             {
-                result = cnt.Query<int>("testProcedure", new
+                regions = cnt.Query<Region>("GetRegion", new
                 {
                 }, commandType: CommandType.StoredProcedure);
             }
-            return result;
+            return regions;
+        }
+
+        public IEnumerable<Object> GetOldObjectsBySubject(int id)
+        {
+            IEnumerable<Object> objects = null;
+            using (var cnt = Concrete.OpenConnection())
+            {
+                objects = cnt.Query<Object>("GetOldObjectsBySubject", new
+                {
+                    Id = id
+                }, commandType: CommandType.StoredProcedure);
+            }
+            return objects;
         }
     }
+
+    
 }

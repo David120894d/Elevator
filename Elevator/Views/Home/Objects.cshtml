@@ -1,0 +1,21 @@
+﻿@model IEnumerable<Elevator.Models.Object>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <script src="~/Scripts/core.js"></script>
+    <meta name="viewport" content="width=device-width" />
+    <title>Objects</title>
+</head>
+<body>
+@foreach (Elevator.Models.Object obj in Model)
+{
+        <p><span>@obj.Address </span><span>@obj.DateOfCreate</span></p>
+    } 
+</body>
+</html>

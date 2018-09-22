@@ -12,8 +12,14 @@ namespace Elevator.Controllers
         // GET: Home
         public ActionResult Index()
         {
-            var t = HomeContext.Exec(c =>c .testProcedure());
-            return View();
+            IEnumerable<Region> regions = HomeContext.Exec(c => c.GetRegion());
+            return View(regions);
+        }
+
+        public ActionResult Objects(int id)
+        {
+            IEnumerable<Elevator.Models.Object> objects = HomeContext.Exec(c => c.GetOldObjectsBySubject(id));
+            return View(objects);
         }
     }
 }

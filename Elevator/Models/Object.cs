@@ -10,5 +10,6 @@ namespace Elevator.Models
         public int Id { get; set; }
         public DateTime DateOfCreate { get; set; }
         public string Address { get; set; }
+        public int ChangeId { get; set; }
     }
 }

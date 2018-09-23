@@ -11,6 +11,7 @@
     <script src="~/Scripts/core.js"></script>
     <link href="~/css/bootstrap.min.css" rel="stylesheet" />
     <link href="~/css/index.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <meta name="viewport" content="width=device-width" />
     <title>Objects</title>
 </head>
@@ -18,11 +19,20 @@
     <h2 class="text-center">Лифты с истекшим сроком службы</h2>
     <div class="objects">
         <table class="table table-striped">
+            <tr class="object">
+                <td class="title address">Адрес</td>
+                <td class="title date-of-create">Дата установки</td>
+                <td class="title modify">Модифицирован</td>
+
+            </tr>
             @foreach (Elevator.Models.Object obj in Model)
             {
                 <tr class="object">
                     <td class="address">@obj.Address</td>
                     <td class="date-of-create">@obj.DateOfCreate.ToString("dd.MM.yyyy")</td>
+                    <td class="modify">@if (obj.ChangeId == 3)
+                    {<span class="glyphicon glyphicon-ok"></span>}</td>
+
                 </tr>
             }
         </table>

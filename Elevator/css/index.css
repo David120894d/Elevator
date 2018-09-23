@@ -27,7 +27,14 @@ body .objects .object .address {
     width: 600px;
 }
 
+body .objects .object .address.title {
+    text-align: center;
+}
 body .objects .object .date-of-create {
     width: 150px;
-    margin-left: 50px;
+    text-align: center;
+}
+
+body .objects .object .modify {
+    text-align: center;
 }

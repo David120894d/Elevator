@@ -21,5 +21,32 @@ namespace Elevator.Controllers
             IEnumerable<Elevator.Models.Object> objects = HomeContext.Exec(c => c.GetOldObjectsBySubject(id));
             return View(objects);
         }
+
+        public ActionResult Map()
+        {
+            return View();
+        }
+
+        public JsonResult GetData()
+        {
+            // создадим список данных
+            List<Station> stations = HomeContext.Exec(c => c.GetInfoMap()).ToList();
+            
+            return Json(stations, JsonRequestBehavior.AllowGet);
+        }
+
+        public ActionResult Graph()
+        {            
+
+            return View();
+        }
+
+        public JsonResult GetGraphData()
+        {
+            // создадим список данных
+            List<GraphModel> stations = HomeContext.Exec(c => c.GetDataForGraph()).ToList();
+
+            return Json(stations, JsonRequestBehavior.AllowGet);
+        }
     }
 }

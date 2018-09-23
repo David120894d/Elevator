@@ -1,0 +1,45 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Graph</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <script src="~/Scripts/jquery-3.3.1.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/admin-lte/js/adminlte.js"></script>
+    <script src="~/Scripts/tether.min.js"></script>
+    <script src="~/Scripts/Graph/Chart.js"></script>
+
+    <script src="~/Scripts/Graph/index.js"></script>
+
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/admin-lte/css/skins/_all-skins.min.css" rel="stylesheet" />
+    <link href="~/admin-lte/css/AdminLTE.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="box box-success">
+        <div class="box-header with-border">
+            <h3 class="box-title">Bar Chart</h3>
+
+            <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse">
+                    <i class="fa fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+            </div>
+        </div>
+        <div class="box-body">
+            <div class="chart" style="overflow:auto">
+                <canvas id="barChart" style="height: 229px; width: 595px;" width="743" height="286"></canvas>
+            </div>
+        </div>
+        <!-- /.box-body -->
+    </div>
+</body>
+</html>

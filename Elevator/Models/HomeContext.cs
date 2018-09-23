@@ -34,6 +34,32 @@ namespace Elevator.Models
             }
             return objects;
         }
+
+        public IEnumerable<GraphModel> GetDataForGraph()
+        {
+            IEnumerable<GraphModel> objects = null;
+            using (var cnt = Concrete.OpenConnection())
+            {
+                objects = cnt.Query<GraphModel>("GetDataForGraph", new {}, commandType: CommandType.StoredProcedure);
+            }
+            return objects;
+        }
+
+        public IEnumerable<Station> GetInfoMap()
+        {
+            //{ Id = 1,
+            //    PlaceName = "Библиотека имени Ленина",
+            //    GeoLat = 37.610489,
+            //    GeoLong = 55.752308,
+            //    Line = "Сокольническая",
+            //    Traffic = 1.0}
+            IEnumerable<Station> objects = null;
+            using (var cnt = Concrete.OpenConnection())
+            {
+                objects = cnt.Query<Station>("GetOldObjectsBySubject", new {}, commandType: CommandType.StoredProcedure);
+            }
+            return objects;
+        }
     }
 
     

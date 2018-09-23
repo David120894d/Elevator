@@ -9,18 +9,22 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/css/index.css" rel="stylesheet" />
     <title>Index</title>
 </head>
 <body>
-    <div>
+    <h2 class="text-center">Поиск устаревших лифтов по региону</h2>
+    <div class="content">
         <form action="Objects">
-            <select name="id">
+            @*<label for="region">Выберите регион:</label>*@
+            <select class="form-control regions" name="region">
                 @foreach (Elevator.Models.Region region in Model)
                 {
                     <option value="@region.Id">@region.Name</option>
                 }
             </select>
-            <button type="submit">Найти</button>
+            <button class="btn btn-primary find" type="submit">Найти</button>
         </form>
     </div>
 </body>

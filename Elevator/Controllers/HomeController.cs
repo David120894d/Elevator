@@ -16,9 +16,9 @@ namespace Elevator.Controllers
             return View(regions);
         }
 
-        public ActionResult Objects(int id)
+        public ActionResult Objects(int region)
         {
-            IEnumerable<Elevator.Models.Object> objects = HomeContext.Exec(c => c.GetOldObjectsBySubject(id));
+            IEnumerable<Elevator.Models.Object> objects = HomeContext.Exec(c => c.GetOldObjectsBySubject(region));
             return View(objects);
         }
 

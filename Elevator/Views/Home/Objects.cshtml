@@ -9,13 +9,23 @@
 <html>
 <head>
     <script src="~/Scripts/core.js"></script>
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/css/index.css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width" />
     <title>Objects</title>
 </head>
 <body>
-@foreach (Elevator.Models.Object obj in Model)
-{
-        <p><span>@obj.Address </span><span>@obj.DateOfCreate.ToString("dd.MM.yyyy")</span></p>
-    } 
+    <h2 class="text-center">Лифты с истекшим сроком службы</h2>
+    <div class="objects">
+        <table class="table table-striped">
+            @foreach (Elevator.Models.Object obj in Model)
+            {
+                <tr class="object">
+                    <td class="address">@obj.Address</td>
+                    <td class="date-of-create">@obj.DateOfCreate.ToString("dd.MM.yyyy")</td>
+                </tr>
+            }
+        </table>
+    </div>
 </body>
 </html>

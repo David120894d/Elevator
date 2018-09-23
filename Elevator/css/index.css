@@ -1,0 +1,33 @@
+﻿body h2 {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+body .content {
+    width: 400px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+body form select.regions {
+     width: 400px;
+}
+
+body form button.find {
+    margin-left: 329px;
+    margin-top: 10px;
+}
+
+body .objects {
+    width: 1000px;
+    margin: 10px auto;
+}
+
+body .objects .object .address {
+    width: 600px;
+}
+
+body .objects .object .date-of-create {
+    width: 150px;
+    margin-left: 50px;
+}

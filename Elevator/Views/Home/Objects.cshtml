@@ -15,7 +15,7 @@
 <body>
 @foreach (Elevator.Models.Object obj in Model)
 {
-        <p><span>@obj.Address </span><span>@obj.DateOfCreate</span></p>
+        <p><span>@obj.Address </span><span>@obj.DateOfCreate.ToString("dd.MM.yyyy")</span></p>
     } 
 </body>
 </html>

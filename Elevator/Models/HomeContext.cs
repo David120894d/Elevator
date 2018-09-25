@@ -56,7 +56,7 @@ namespace Elevator.Models
             IEnumerable<Station> objects = null;
             using (var cnt = Concrete.OpenConnection())
             {
-                objects = cnt.Query<Station>("GetOldObjectsBySubject", new {}, commandType: CommandType.StoredProcedure);
+                objects = cnt.Query<Station1>("GetMap", new {}, commandType: CommandType.StoredProcedure).Select(x => new Station { GeoLat = Double.Parse(x.GeoLat.Replace(".", ",")), GeoLong = Double.Parse(x.GeoLong.Replace(".", ",")), Id = x.Id, PlaceName = x.PlaceName }).ToList();
             }
             return objects;
         }

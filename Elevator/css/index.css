@@ -14,7 +14,7 @@ body form select.regions {
 }
 
 body form button.find {
-    margin-left: 329px;
+    margin-left: 333px;
     margin-top: 10px;
 }
 
@@ -37,4 +37,8 @@ body .objects .object .date-of-create {
 
 body .objects .object .modify {
     text-align: center;
+}
+
+body .map {
+    margin: 10px auto;
 }

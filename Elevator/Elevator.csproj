@@ -89,7 +89,20 @@
     <Content Include="css\font-awesome.css" />
     <Content Include="css\index.css" />
     <Content Include="Global.asax" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\core.js" />
+    <Content Include="Scripts\Graph\Chart.js" />
+    <Content Include="Scripts\Graph\index.js" />
+    <None Include="Scripts\jquery-3.1.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.1.1.js" />
+    <Content Include="Scripts\jquery-3.1.1.min.js" />
+    <Content Include="Scripts\jquery-3.1.1.slim.js" />
+    <Content Include="Scripts\jquery-3.1.1.slim.min.js" />
+    <Content Include="Scripts\jquery-3.3.1.js" />
+    <Content Include="Scripts\script.js" />
+    <Content Include="Scripts\tether.js" />
+    <Content Include="Scripts\tether.min.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -100,11 +113,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\GraphModel.cs" />
     <Compile Include="Models\Object.cs" />
     <Compile Include="Models\Region.cs" />
     <Compile Include="Models\DB\Concrete.cs" />
     <Compile Include="Models\DB\Context.cs" />
     <Compile Include="Models\HomeContext.cs" />
+    <Compile Include="Models\Station.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -112,6 +127,10 @@
     <Content Include="packages.config" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Objects.cshtml" />
+    <Content Include="Views\Home\Graph.cshtml" />
+    <Content Include="Views\Home\Map.cshtml" />
+    <Content Include="Scripts\jquery-3.1.1.min.map" />
+    <Content Include="Scripts\jquery-3.1.1.slim.min.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
